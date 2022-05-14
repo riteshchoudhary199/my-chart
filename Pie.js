@@ -16,23 +16,7 @@ const { width, height } = Dimensions.get("screen");
 const App = (props) => {
   return (
     <View style={styles.container}>
-      <VictoryChart theme={VictoryTheme.material}>
-        <VictoryBar
-          //style={{ data: { fill: "orange" } }}
-          barWidth={15}
-          width={width + 30}
-          height={height / 5}
-          labels={({ datum }) => `${datum._y}`}
-          animate
-          data={data}
-          x="month"
-          y="earnings"
-        />
-      </VictoryChart>
-      <VictoryChart>
-        <VictoryLine data={data} x="month" y="earnings" />
-      </VictoryChart>
-      <Svg viewBox="-50 100 400 400">
+      <Svg viewBox="-50 0 400 400">
         <VictoryPie
           standalone={false}
           width={300}
@@ -40,7 +24,7 @@ const App = (props) => {
           data={data}
           x="month"
           y="earnings"
-          innerRadius={68}
+          innerRadius={50}
           labelRadius={100}
           theme={VictoryTheme.material}
           style={{ labels: { fontSize: 20, fill: "white" } }}

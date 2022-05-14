@@ -32,41 +32,6 @@ const App = (props) => {
       <VictoryChart>
         <VictoryLine data={data} x="month" y="earnings" />
       </VictoryChart>
-      <Svg viewBox="-50 100 400 400">
-        <VictoryPie
-          standalone={false}
-          width={300}
-          height={300}
-          data={data}
-          x="month"
-          y="earnings"
-          innerRadius={68}
-          labelRadius={100}
-          theme={VictoryTheme.material}
-          style={{ labels: { fontSize: 20, fill: "white" } }}
-        />
-        <VictoryLabel
-          textAnchor="middle"
-          style={{ fontSize: 20 }}
-          x={150}
-          y={150}
-          text="Pie!"
-        />
-        <VictoryLabel
-          textAnchor="middle"
-          style={{ fontSize: 20 }}
-          x={50}
-          y={50}
-          text="Pie!"
-        />
-        <VictoryLabel
-          textAnchor="middle"
-          style={{ fontSize: 20 }}
-          x={320}
-          y={120}
-          text="Pie!"
-        />
-      </Svg>
     </View>
   );
 };
